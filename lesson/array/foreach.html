@@ -10,10 +10,17 @@
 
 <body>
     <script>
-        let a = [1, 2, 3, 4, 5]
-        let result = a.splice(2, 2, 'b', 'bcd');
-        document.write(a) 
+        let arr = [1, 2, 3, 4, 5];
+        let t = 0;
+        let sum = 0;
+        arr.forEach(function (i, index, a) {
+            t += i;
+            sum += index;
+            a[index] = i +1;
+        })
+        
+        document.write(arr)
     </script>
-</body> 
+</body>
 
 </html>

@@ -10,10 +10,13 @@
 
 <body>
     <script>
-        let a = [1, 2, 3, 4, 5]
-        let result = a.splice(2, 2, 'b', 'bcd');
-        document.write(a) 
+        let arr = [1, 2, 3, 4, 5, 6];
+        let new_arr;
+        new_arr = arr.map(function (value, index, array) {
+            return value * 2
+        })
+        document.write(new_arr);
     </script>
-</body> 
+</body>
 
 </html>
