@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let person = {
+            full: 'minh',
+            level: 1,
+
+            get getfullname() {
+                if (this.level == 1) {
+                    return this.full;
+                } else {
+                    return "ban khong du quyen"
+                }
+            },
+
+            set setFullname(thamso) {
+                if(this.level == 1) {
+                    this.full = thamso;
+                }
+            }
+
+
+        }
+        person.setFullname ='ducminh'
+        document.write(person.getfullname);
+    </script>
+</body>
+
+</html>
