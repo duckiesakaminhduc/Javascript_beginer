@@ -15,11 +15,25 @@
     <h2>Lorem, ipsum.</h2>
     <h2>Lorem, ipsum dolor.</h2>
     <h3>lorem</h3>
+    <p class="menu">menu</p>
+    <p class="menu">menu1</p>
+    <p class="menu">menu2</p>
+    <p class="menu">menu3</p>
 
     <script>
-        const h1_ele = document.getElementsByTagName('h2');
-        console.log(h1_ele)
-      document.getElementsByTagName('h2')[0].style.color = 'red'
+        const h2 = document.getElementsByTagName('h2');
+        console.log(h2)
+      
+        for(let i = 0; i < h2.length; i++) {
+            console.log(h2[i]);
+            h2[i].style.color = "red";
+        }
+
+        const menu = document.getElementsByClassName('menu');
+        // console.log(menu)
+      for(let i = 0; i< menu.length; i++) {
+        menu[i].style.color = 'red'
+      }
     </script>
 </body>
 
