@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">This is blur event</h1>
+
+    <form action="" id="Register">
+        <fieldset>
+            <legend>Register Form</legend>
+            <label for="username">User name</label> <br>
+            <input type="text" id="username">
+            <br>
+            <label for="password">Password</label> <br>
+            <input type="password" id="password"><br> <br>
+            <form action="">City</form>
+            <select name="" id="menu">
+                <option value="0">---chon---</option>
+                <option value="1">Tp.Hcm</option>
+                <option value="2">Da Nang</option>
+                <option value="3">Dong Nai</option>
+            </select> <br> <br>
+            <input type="submit" value="Login now">
+        </fieldset>
+    </form>
+
+    <script>
+        // const username = document.getElementById('username');
+        // username.addEventListener('blur', function() {
+        //     console.log('xin chao');
+        // })
+
+        // const username = document.getElementById('menu');
+        // menu.addEventListener('focus', function() {
+        //     console.log(menu.value);
+        // })
+        // const username = document.getElementById('username');
+        // username.addEventListener('change', function() {
+        //     console.log("xinchao");
+        // })
+        // const username = document.getElementById('username');
+        // username.addEventListener('keydown', function() {
+        //     console.log("xinchao");
+        // })
+        // const username = document.getElementById('username');
+        // username.addEventListener('input', function() {
+        //     console.log("xinchao");
+        // })
+        const re = document.getElementById('Register');
+        re.addEventListener('submit', function(e) {
+            console.log("xinchao");
+            e.preventDefault();
+        });
+    </script>
+</body>
+
+</html>
