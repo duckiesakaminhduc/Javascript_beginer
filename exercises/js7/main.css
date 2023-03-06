@@ -1,0 +1,14 @@
+#wp-img {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#img_1  {
+    width: 300px;
+    margin-right: 10px;
+}
+
+#img_2  {
+    width: 300px;
+}
