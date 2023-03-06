@@ -5,72 +5,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <!-- <script src="https://kit.fontawesome.com/5ec3902171.js" crossorigin="anonymous"></script> -->
-    <title>Document</title>
+    <title>JS EX6</title>
 </head>
 
 <body>
-    <h1> Register</h1>
+    <h1>Register Form</h1>
     <form action="" id="register">
         <fieldset>
-            <legend>Register form</legend>
-            <label for="fullname">Fullname</label>
-            <br>
-            <input type="text" id="fullname" autocomplete="off">
-            <br>
-            <label for="username">Username</label>
-            <br>
-            <input type="text" id="username" autocomplete="off">
-            <br>
-            <label for="password">Password</label>
-            <br>
-            <input type="password" id="password" autocomplete="off">
-            <br>
-            <label for="city">City</label>
-            <br>
-            <select name="city" id="city">
+            <legend>Register</legend>
+            <label for="fullname">Fullname</label> <br>
+            <input type="text" name="" id="fullname"> <br>
+            <label for="username">Username</label> <br>
+            <input type="text" name="" id="username"> <br>
+            <label for="password">Password</label> <br>
+            <input type="password" name="" id="password"> <br>
+            <label for="city">City</label> <br>
+            <select name="" id="city">
                 <option value="">--Chọn--</option>
                 <option value="1">Hà Nội</option>
                 <option value="2">TP.HCM</option>
                 <option value="3">Đà Nẵng</option>
-                <option value="4">Thành phố khác</option>
-            </select>
-            <br>
-            <br>
-            <input type="submit" value="Register now">
+            </select> <br> <br>
+            <input type="submit" value="Register Now">
         </fieldset>
     </form>
     <div id="result"></div>
-
     <script>
-        const registerForm = document.forms.register;
-        registerForm.addEventListener('submit', function (e) {
-            const fullname = document.getElementById('fullname').value;
-            const username = document.getElementById('username').value;
+        const register = document.getElementById('register');
+        register.addEventListener('submit', function (e) {
+            const fullName = document.getElementById('fullname').value;
+            const userName = document.getElementById('username').value;
             const password = document.getElementById('password').value;
-            const city = document.getElementById('city').value;
-            const result = document.getElementById('result');
-            console.log(city)
-            let data= '';
-            let cityName = [];
-            function showCityName(city) {
-                cityName[1] = 'Hà nội';
-                cityName[2] = 'Tp HCM';
-                cityName[3] = 'Đà Nẵng';
-                cityName[4] = 'other';
-                return cityName[city];
-            }
-            // "Fullname: " + "<b>" + fullName + "</b>" + "<br>" + 
-            // "Username: " + "<b>" + userName + "</b>" + "<br>" + 
-            // "Mật khẩu: " + "<b>" + password + "</b>" + "<br>" + 
-            // "Thành phố: " + "<b>" + showCityName(city) + "</b>" + "<br>"
-            // "Fullname:" + "<b>" +fullname +"</b"
-               data =  `<b>${fullname}</b>`
-                result.innerHTML = data;
+            const city_id = document.getElementById('city').value;
+            const re = document.getElementById('result');
+            let data = '';
 
+            let a = [];
+            function showCity(city_id) {
+                a[1] = 'Hà Nội';
+                a[2] = 'TP.HCM';
+                a[3] = 'Đà Nẵng';
+                return a[city_id];
+            }
+            //  data =  `<b>${fullname}</b>`
+
+            data =  `
+            Fullname: <b>${fullName}</b> <br>
+            Username: <b>${userName}</b> <br>
+            Password: <b>${password}</b> <br>
+            City: <b>${showCity(city_id)}</b>
+            `
+            re.innerHTML = data;
             e.preventDefault();
-        });
+        })
     </script>
 </body>
 

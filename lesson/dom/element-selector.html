@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>Get Element by Seletor</h1>
+    <h1 id="demo">Get Element by Seletor</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid et voluptates quo impedit blanditiis laborum
         repudiandae inventore voluptatibus non vel?</p>
     <h1>header1</h1>
@@ -23,6 +23,9 @@
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, inventore.</p>
     <h1>header 3</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, commodi?</p>
+    <div id="result">
+        Thanh tien :
+    </div>
     <script>
         let h1 = document.getElementsByTagName('h1');
         console.log(h1);
@@ -30,7 +33,9 @@
         let hightlight = document.querySelectorAll('ul .hightlight');
         console.log(hightlight)
         hightlight[0].style.color = 'yellow'
-
+        console.log(document.getElementById('demo').innerText)
+        const total = 2003;
+        document.getElementById('result').innerHTML = document.getElementById('result').innerText + total + '$';
     </script>
 </body>
 
