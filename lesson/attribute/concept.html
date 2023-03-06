@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HasAttribute</title>
+</head>
+
+<body>
+    <a href="http://google.com" id="this_is_id" target="_blank">Google</a>
+    <div id="result"></div>
+    <script>
+        const ele = document.querySelector('a');
+        console.log(ele.hasAttribute('id'));
+
+        if (ele.hasAttribute('id')) {
+            console.log(`Review: ${ele.getAttribute('id')}`);
+            document.getElementById('result').innerHTML = 
+            `Review: ${ele.getAttribute('id')}`;
+        }
+    </script>
+</body>
+
+</html>
