@@ -1,0 +1,14 @@
+
+#register #input-name,#input-password {
+    position: relative;
+    display: inline-block;
+}
+
+#icon {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-top: 2px;
+    margin-right: 2px;
+}

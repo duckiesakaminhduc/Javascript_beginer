@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS EX6</title>
+</head>
+
+<body>
+    <h1>Register Form</h1>
+    <form action="" id="register">
+        <fieldset>
+            <legend>Register</legend>
+            <label for="fullname">Fullname</label> <br>
+            <input type="text" name="" id="fullname"> <br>
+            <label for="username">Username</label> <br>
+            <input type="text" name="" id="username"> <br>
+            <label for="password">Password</label> <br>
+            <input type="password" name="" id="password"> <br>
+            <label for="city">City</label> <br>
+            <select name="" id="city">
+                <option value="">--Chọn--</option>
+                <option value="1">Hà Nội</option>
+                <option value="2">TP.HCM</option>
+                <option value="3">Đà Nẵng</option>
+            </select> <br> <br>
+            <input type="submit" value="Register Now">
+        </fieldset>
+    </form>
+    <div id="result"></div>
+    <script>
+        const register = document.getElementById('register');
+        register.addEventListener('submit', function (e) {
+            const fullName = document.getElementById('fullname').value;
+            const userName = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const city_id = document.getElementById('city').value;
+            const re = document.getElementById('result');
+            let data = '';
+
+            let a = [];
+            function showCity(city_id) {
+                a[1] = 'Hà Nội';
+                a[2] = 'TP.HCM';
+                a[3] = 'Đà Nẵng';
+                return a[city_id];
+            }
+            //  data =  `<b>${fullname}</b>`
+
+            data =  `
+            Fullname: <b>${fullName}</b> <br>
+            Username: <b>${userName}</b> <br>
+            Password: <b>${password}</b> <br>
+            City: <b>${showCity(city_id)}</b>
+            `
+            re.innerHTML = data;
+            e.preventDefault();
+        })
+    </script>
+</body>
+
+</html>
