@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Title</h1>
+    <script>
+        const wrapper = document.createElement('div');
+        wrapper.id = 'main-menu';
+        wrapper.className = 'sub-menu';
+        wrapper.innerText = 'this is text'
+        const p = document.createElement('p');
+        p.className = 'tag_p'
+        p.innerText = 'the p'
+        wrapper.appendChild(p)
+        document.body.appendChild(wrapper)
+        const ul = document.createElement('ul');
+        ul.innerText = 'this is ul';
+        const li = document.createElement('li');
+        li.innerText = 'this is li'
+        ul.appendChild(li);
+        wrapper.appendChild(ul);
+    </script>
+</body>
+
+</html>

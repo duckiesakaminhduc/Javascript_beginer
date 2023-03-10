@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="menu">
+        <li id="s1">mot</li>
+        <li>hai</li>
+    </ul>
+    <script>
+        const li1 = document.createElement('li');
+        const menu = document.getElementById('menu')
+        const s1 = document.getElementById('s1')
+        li1.innerText = 'ba';
+        const li2 = document.createElement('li');
+        li2.textContent = 'bon'
+        s1.append(li1, li2);
+    </script>
+</body>
+
+</html>
