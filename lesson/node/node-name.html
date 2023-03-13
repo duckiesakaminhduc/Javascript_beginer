@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node name</title>
+</head>
+
+<body>
+    <h1>Node name</h1>
+    <a href="#">Học lập trình để đi làm</a>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non assumenda consequatur rem quod? Earum fugiat
+        recusandae dolorum nam blanditiis voluptatem!</p>
+    <ul id="main-menu">
+        <li>item 1
+            <ul id="sub-menu"> 
+                <li>item 1.1</li>
+                <li>item 1.2</li>
+                <li>item 1.3</li>
+            </ul>
+        </li>
+        <li  id="curent">item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime assumenda doloribus ducimus, culpa accusamus
+        quod labore inventore voluptas amet sapiente!</p>
+
+    <script>
+        // const h1Node = document.querySelector('h1');
+        // console.log(h1Node.nodeName);
+        // const ulNode = document.querySelector('ul');
+        // console.log(ulNode.childNodes);
+
+        // const item  = document.querySelector('#main-menu li #sub-menu li');
+        // // item.style.background  = 'yellow'
+        // item.closest('#sub-menu').style.background  = 'yellow'   
+        // const mainMenu = document.getElementById('main-menu');
+        // console.log(mainMenu.children[0])
+        // mainMenu.children[0].style.color = 'red'
+
+        const a = document.getElementById('curent')
+        a.previousElementSibling.style.color = 'red'
+    </script>
+</body>
+
+</html>
